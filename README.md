@@ -76,3 +76,19 @@ As a **Base Model** (not an Instruction-Tuned model), MicroGPT functions as a hi
 Prompt: The mitochondria is known as the
 
 AI Completion: two-year old man who was involved in his wife. He is known as the "The Three" (Kanguthenon). The last trunks of the 10th century had been...
+
+```
+##  How to Use the Inference Scripts
+
+Because this is a **Base Model** trained on raw text (and not fine-tuned on conversational data), it functions as a pure text-completion engine. I have provided two scripts to interact with the weights depending on how you want to test it:
+
+### 1. `auto.py` (Recommended)
+This is the intended way to interact with MicroGPT. You provide a "seed" sentence (like the beginning of a textbook paragraph or a historical fact), and the model will use its training to mathematically predict and generate the rest of the text.
+* **Usage:** Run `python auto.py`
+* **Best Prompts:** `"The theory of relativity states that"`, `"During the 18th century,"`
+* **Expected Output:** A continuous, highly-structured continuation of your prompt (often hallucinating facts but maintaining perfect grammar).
+
+### 2. `chat.py` (Experimental)
+This script attempts to force the model into a back-and-forth conversational format using simulated `User:` and `AI:` tags. 
+* **Usage:** Run `python chat.py`
+* **Why it acts weird:** Because MicroGPT has never been "Instruction-Tuned" to act like an assistant, it does not actually know it is in a chat. It is merely autocompleting what it thinks a script of a conversation should look like. It will often ignore your questions, go off on tangents, or even start generating both the `User:` and `AI:` responses itself!
