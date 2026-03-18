@@ -1,0 +1,16 @@
+# Core Machine Learning Framework
+torch>=2.0.0
+
+Note for Windows Users: To train on an NVIDIA GPU, ensure you install the CUDA-enabled version of PyTorch from their official site before running the requirements file.
+
+# Tokenization (OpenAI GPT-2 BPE)
+tiktoken
+
+# Data Streaming (Hugging Face FineWeb-Edu)
+datasets
+
+# Progress Bars
+tqdm
+
+# Graphing and Visualization
+matplotlib
