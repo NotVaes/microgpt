@@ -1,6 +1,3 @@
-# microgpt
-a Small Custom LLM trained from Scratch with a parameter of 30.5M
-
 # MicroGPT 30.5M Parameter Custom LLM Trained from Scratch
 
 ![Parameters](https://img.shields.io/badge/Parameters-30.5M-blue)
